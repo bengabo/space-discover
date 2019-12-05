@@ -1,0 +1,56 @@
+#PageGallery {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+#PageGallery img {
+  object-fit: cover;
+  z-index:1;
+  width: 400px;
+  height: 400px;
+  margin: 100px 0;
+}
+
+#PageGallery #structure {
+  display: inline-block;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  margin: auto 50px;
+}
+
+#PageGallery #title p{
+  overflow: hidden;
+  text-align: center;
+  z-index: 10;
+  background: transparent;
+  font-size: 2em;
+  background-color: dimgrey;
+  color: white;
+  opacity: 70%;
+  width: 400px;
+  margin: -62px 0px 0 auto;
+}
+
+/*--------fonction LazyLoading-------------*/
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: opacity 3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  color: transparent;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
